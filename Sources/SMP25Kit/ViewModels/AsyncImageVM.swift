@@ -13,6 +13,8 @@ public final class AsyncImageVM {
 
     public var image: UIImage?
 
+    public init() {}
+
     public func getImage(url: URL?) {
         guard let url, let urlDoc = imageDownloader.urlDoc(url: url) else { return }
         if FileManager.default.fileExists(atPath: urlDoc.path()) {
